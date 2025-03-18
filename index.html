@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script type="module" defer src="./app/index.js"></script>
+    <title>Progress Block</title>
+  </head>
+  <body>
+    <h3>Progress</h3>
+    <div class="container">
+        <div class="progress-circle" id="circle">
+        </div>
+      <div class="controls">
+        <label for="value" class="value">
+          <input type="number" id="value" class="value__input" />
+          <span class="value__title">Value</span>
+        </label>
+        <label for="animate" class="animate">
+          <input type="checkbox" id="animate" class="animate__toggle" />
+          <span class="animate__title">Animate</span>
+        </label>
+        <label for="visibility" class="visibility">
+          <input type="checkbox" id="visibility" class="visibility__toggle"/>
+          <span class="visibility__title">Hide</span>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
