@@ -1,7 +1,16 @@
 export function updateProgress(valueInput, progressCircle) {
   const circle = progressCircle;
-  const value = Math.min(100, Math.max(0, valueInput.value));
-  circle.style.setProperty('--progressValue', `${(value / 100) * 360}deg`);
+  const inputValue = valueInput;
+  if (inputValue.value > MAX || inputValue.value < MIN || !(/^\d*\.?\d*$/).test(inputValue.value))
+    inputValue.value = '';
+
+  circle.style.setProperty('--progressValue', `${(inputValue.value / 100) * 360}deg`);
+}
+
+export function checkNaNValue(event) {
+  if (!/[0-9.]/.test(event.key)) {
+    event.preventDefault()
+  }
 }
 
 export function controlRotation(animateToggle, progressCircle) {
